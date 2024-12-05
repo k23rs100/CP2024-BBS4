@@ -57,7 +57,7 @@ function updateCharacterCount(inputId, counterId, maxLength) {
     
     input.on('input', () => {
         const length = input.val().length;
-        counter.text(`${length}/${maxLength}`);
+        counter.text(`${1000-length}/${maxLength}`);
     
         if (length > maxLength) {
             counter.addClass('error');
