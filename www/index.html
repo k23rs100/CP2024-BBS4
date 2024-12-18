@@ -66,6 +66,43 @@ function updateCharacterCount(inputId, counterId, maxLength) {
         }
     });
 }
+ 
+//ボタンの処理
+$(function() { 
+        $('#btnA').click(function(e) {
+            btnAClick(e);
+        });
+         $('#btnC').click(function(e) {
+            btnCClick(e);
+        });
+        $('#btnB').click(function(e) {
+            btnBClick(e);
+        });
+        init();
+    });
+
+function init(){
+     $('#btnA').prop('disabled', false);
+     $('#btnB').prop('disabled', false);
+     $('#btnC').prop('disabled', false);
+}
+
+function btnAClick(e){
+    active=true;
+    
+}
+
+function btnBClick(e){
+    active=true;
+    
+}
+
+
+function btnCClick(e){
+    active=true;
+    
+}
+
 
 // 投稿内容のバリデーション
 function validateContent(content) {
@@ -616,5 +653,8 @@ window.addEventListener('unload', function() {
             </div>
         </div>
     </div>
+     <button id="btnA">red</button>  
+     <button id="btnB">yellow</button>
+     <button id="btnC">green</button>
 </body>
 </html>
