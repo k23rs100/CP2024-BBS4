@@ -78,28 +78,40 @@ $(function() {
         $('#btnB').click(function(e) {
             btnBClick(e);
         });
-        init();
+        $('#btnD').click(function(e) {
+            btnDClick(e);
+        });
     });
 
 function init(){
      $('#btnA').prop('disabled', false);
      $('#btnB').prop('disabled', false);
      $('#btnC').prop('disabled', false);
+    $('#btnD').prop('disabled', false);
 }
 
 function btnAClick(e){
     active=true;
+    $('body').css('background-color','red');
     
 }
 
 function btnBClick(e){
     active=true;
-    
+    $('body').css('background-color','yellow');
+
 }
 
 
 function btnCClick(e){
     active=true;
+    $('body').css('background-color','greenyellow');
+    
+}
+
+function btnDClick(e){
+    active=true;
+    $('body').css('background-color','white');
     
 }
 
@@ -656,5 +668,6 @@ window.addEventListener('unload', function() {
      <button id="btnA">red</button>  
      <button id="btnB">yellow</button>
      <button id="btnC">green</button>
+     <button id="btnD">white</button>
 </body>
 </html>
